@@ -1,3 +1,4 @@
+/* Классы для стилей */
 *,
 *::before,
 *::after {
@@ -6,16 +7,6 @@
 
 html {
   block-size: 100%;
-}
-
-.page {
-  inline-size: 1200px;
-  block-size: 100%;
-  margin: auto;
-  color: #fff;
-  font-family: 'Fira Sans Condensed', sans-serif;
-  font-size: 18px;
-  background-color: #1b1919;
 }
 
 h1,
@@ -36,6 +27,325 @@ ul,
 ol {
   list-style: none;
 }
+/* Класс для скрытия */
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  inline-size: 1px;
+  block-size: 1px;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+/* Тело страницы */
+.page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  background-color: #1b1919;
+  inline-size: 1200px;
+  block-size: 100%;
+}
+/* Кнопки */
+.button {
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff;
+  box-shadow: none;
+  outline: none;
+  color: #ffffff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  background: none;
+  cursor: pointer;
+}
+/* Кнопки при наведении */
+.button:hover {
+  text-decoration: underline;
+}
+/* Кнопки при активации */
+.button:active {
+  background-color: #545050;
+}
+/* Кнопки в фокусе (сброс) */
+.button:focus {
+  outline: none;
+}
+/* Кнопки в фокусе(таб) */
+.button:focus-visible {
+  outline: 1px solid #ffffff; /* Цвет обводки */
+  outline-offset: 1px; /* Отступ обводки от края */
+}
+/* ---------------------------------------Весь контент внутри тела. Поделён на две колонки------------------------------------- */
+.content {
+  display: grid;
+  grid-template-columns: 711px 399px;
+  gap: 30px;
+  width: 1140px;
+  height: 534px;
+}
+
+/* -----------------------Левая колонка результата */
+.result {
+  width: 100%;
+  height: 456px;
+}
+/* -----------------------Левая колонка результата. Блок с видео*/
+.result__video-container {
+  position: relative;
+  width: 100%;
+  height: 386px;
+  margin-top: 78px;
+  margin-bottom: 16px;
+}
+/* -----------------------Левая колонка результата. Ссылка на видео*/
+.result__video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* -----------------------Левая колонка результата. Блок поиска под видео*/
+.search-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+/* -----------------------Левая колонка результата. Колонки блока поиска*/
+.search-form__fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border: none;
+}
+/* -----------------------Левая колонка результата. Заголовок колонки блока поиска*/
+.search-form__fieldset-title {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-weight: normal;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+/* -----------------------Левая колонка результата. Функциональный блок колонки блока поиска*/
+.search-form__label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  width: fit-content;
+}
+/* -----------------------Левая колонка результата. Текст функционального блока колонки блока поиска*/
+.search-form__label-text {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+}
+/* -----------------------Левая колонка результата. Поле ввода функционального блока колонки блока поиска*/
+.search-form__textfield {
+  width: 225px;
+  height: 27px;
+  border-width: 1px 0px 1px 0px;
+  border-style: solid;
+  border-color: #ffffff;
+  color: #fff;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 100%;
+  letter-spacing: 0;
+  background: none;
+  cursor: pointer;
+  appearance: none;
+}
+/* -----------------------Левая колонка результата. Подсказка функционального блока колонки блока поиска*/
+.search-form__textfield::placeholder {
+  color: rgb(255 255 255 / 0.7);
+}
+/* -----------------------Левая колонка результата. Чек-бокс колонки блока поиска*/
+.search-form__checkbox-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  padding-top: 5px;
+}
+/* -----------------------Левая колонка результата. Чек-бокс при наведении колонки блока поиска*/
+.search-form__checkbox-list .search-form__label:hover {
+  text-decoration: underline;
+}
+/* -----------------------Левая колонка результата. Замещающий чек-бокс колонки блока поиска*/
+.search-form__pseudo-checkbox {
+  position: relative;
+  width: 19px;
+  height: 19px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #ffffff;
+  padding: 1px;
+  background: none;
+  cursor: pointer;
+}
+/* -----------------------Левая колонка результата. Замещающий чек-бокс (квадрат) колонки блока поиска*/
+.search-form__pseudo-checkbox::after {
+  content: none;
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background-color: #ffffff;
+}
+/* -----------------------Левая колонка результата. Замещающий чек-бокс при выборе колонки блока поиска*/
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  opacity: 1;
+}
+/* -----------------------Левая колонка результата. Кнопка колонки блока поиска*/
+.search-form__submit-button {
+  align-self: end;
+  width: 194px;
+  height: 34px;
+}
+/*                                                               Правая колонка результата-------------------------------------*/
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  width: 100%;
+  height: 100%;
+}
+/*                                                   Правая колонка результата. Заголовок-------------------------------------*/
+.title {
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+}
+/*                                     Правая колонка результата. Первая строчка заоловка-------------------------------------*/
+.content__accent {
+  opacity: 0.2;
+}
+/*                                          Правая колонка результата. Блок выбора города-------------------------------------*/
+.content__list-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  height: 298px;
+  overflow: auto;
+}
+/*                                        Правая колонка результата. Список выбора города-------------------------------------*/
+.content__list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+/*                                Правая колонка результата. Элемент список выбора города-------------------------------------*/
+.content__list-item {
+  padding-right: 3px;
+  padding-left: 3px;
+}
+/*                                Правая колонка результата. Ссылка список выбора города-------------------------------------*/
+.content__card-link {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+/*                 Правая колонка результата. Ссылка список выбора города (по умолчанию)-------------------------------------*/
+.content__card-link_current {
+  background-color: #545050;
+}
+/*                     Правая колонка результата. Ссылка список выбора города (активная)-------------------------------------*/
+.content__card-link:active {
+  background-color: #545050;
+}
+/*                Правая колонка результата. Ссылка список выбора города (при наведении)-------------------------------------*/
+.content__card-link:hover {
+  text-decoration: underline;
+}
+/*             Правая колонка результата. Ссылка список выбора города (в фокусе (сброс))-------------------------------------*/
+.content__card-link:focus {
+  outline: none;
+}
+/*               Правая колонка результата. Ссылка список выбора города (в фокусе (таб))-------------------------------------*/
+.content__card-link:focus-visible {
+  outline: 1px solid #ffffff;
+  outline-offset: 1px;
+}
+/*                    Правая колонка результата. Карточка элемента списока выбора города-------------------------------------*/
+.content__video-card {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+/*       Правая колонка результата. Блок описания карточки элемента списока выбора города-------------------------------------*/
+.content__video-card-description-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 6px;
+  width: 196px;
+}
+/*            Правая колонка результата. Заголовок карточки элемента списока выбора города-------------------------------------*/
+.content__video-card-title {
+  display: inline-block;
+  overflow: hidden;
+  font-family: Oswald, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+/*               Правая колонка результата. Текст карточки элемента списока выбора города-------------------------------------*/
+.content__video-card-description {
+  display: inline-block;
+  display: -webkit-box;
+  overflow: hidden;
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+  line-height: 16.2px;
+  letter-spacing: 0;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  line-clamp: 4;
+  box-orient: vertical;
+}
+/*           Правая колонка результата. Картинка карточки элемента списока выбора города-------------------------------------*/
+.content__video-card-thumbnail {
+  width: 194px;
+  height: 103px;
+  object-fit: cover;
+  object-position: center;
+}
+/*             Правая колонка результата. Кнопка карточки элемента списока выбора города-------------------------------------*/
+.more-button {
+  width: 100%;
+  height: 34px;
+  padding: 1px;
+}
 
 /* Кастомный скроллбар */
 .custom-scrollbar::-webkit-scrollbar {
@@ -47,7 +357,5 @@ ol {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
 }
-
-

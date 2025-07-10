@@ -1,0 +1,25 @@
+{
+  "dependencies": {
+    "prettier": "^3.6.2"
+  },
+  "name": "posmotri-v-okno-fd",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "check": "prettier --check './**/*.{html,css,js}'",
+    "format": "prettier --write './**/*.{html,css,js}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LLezar/posmotri-v-okno-fd.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LLezar/posmotri-v-okno-fd/issues"
+  },
+  "homepage": "https://github.com/LLezar/posmotri-v-okno-fd#readme",
+  "description": ""
+}
